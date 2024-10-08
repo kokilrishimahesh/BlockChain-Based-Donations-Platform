@@ -1,0 +1,345 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_donationsContract",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_ownerAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_campaignId",
+						"type": "uint256"
+					}
+				],
+				"name": "addCampaign",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum ProfileManager.Role",
+						"name": "_role",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_profileImage",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					}
+				],
+				"name": "createOwnerProfile",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "donationsContract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_ownerAddress",
+						"type": "address"
+					}
+				],
+				"name": "getCampaigns",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "titles",
+						"type": "string[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "descriptions",
+						"type": "string[]"
+					},
+					{
+						"internalType": "address[]",
+						"name": "creators",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "targets",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "deadlines",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "statuses",
+						"type": "string[]"
+					},
+					{
+						"internalType": "address[][]",
+						"name": "contributors",
+						"type": "address[][]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_ownerAddress",
+						"type": "address"
+					}
+				],
+				"name": "getOwnerDetails",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "ownerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "enum ProfileManager.Role",
+								"name": "role",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "creationDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "profileImage",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "campaignIds",
+								"type": "uint256[]"
+							}
+						],
+						"internalType": "struct ProfileManager.Owner",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_ownerAddress",
+						"type": "address"
+					}
+				],
+				"name": "getOwnerRole",
+				"outputs": [
+					{
+						"internalType": "enum ProfileManager.Role",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					}
+				],
+				"name": "isProfileActive",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					}
+				],
+				"name": "isProfileOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "owners",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "ownerAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "enum ProfileManager.Role",
+						"name": "role",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "creationDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "profileImage",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_profileImage",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					}
+				],
+				"name": "updateOwnerProfile",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Blockchain_project/ProfileManager.sol": "ProfileManager"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Blockchain_project/ProfileManager.sol": {
+			"keccak256": "0xd2716aa2c126d77bbe79b18b24ad6b939ad85e75a016a8f720aaafed9e35d0ab",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://455f14916d95287956590b15a1cba10fd499b28eb5505ac0db16c6aa28e72ad0",
+				"dweb:/ipfs/QmPGPLvPfWBsRTPXwtL7pQL3hLQoicnFnMtpSL3U424t9c"
+			]
+		}
+	},
+	"version": 1
+}
