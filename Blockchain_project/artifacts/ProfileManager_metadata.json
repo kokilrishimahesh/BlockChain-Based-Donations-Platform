@@ -9,17 +9,6 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_donationsContract",
-						"type": "address"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
 						"name": "_ownerAddress",
 						"type": "address"
 					},
@@ -86,6 +75,11 @@
 				"name": "getCampaigns",
 				"outputs": [
 					{
+						"internalType": "address[]",
+						"name": "ownerAddresses",
+						"type": "address[]"
+					},
+					{
 						"internalType": "string[]",
 						"name": "titles",
 						"type": "string[]"
@@ -96,29 +90,32 @@
 						"type": "string[]"
 					},
 					{
-						"internalType": "address[]",
-						"name": "creators",
-						"type": "address[]"
-					},
-					{
 						"internalType": "uint256[]",
 						"name": "targets",
 						"type": "uint256[]"
 					},
 					{
 						"internalType": "uint256[]",
-						"name": "deadlines",
+						"name": "amountsCollected",
 						"type": "uint256[]"
 					},
 					{
-						"internalType": "string[]",
-						"name": "statuses",
-						"type": "string[]"
-					},
+						"internalType": "uint256[]",
+						"name": "totalWithdrawn",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDonationAddress",
+				"outputs": [
 					{
-						"internalType": "address[][]",
-						"name": "contributors",
-						"type": "address[][]"
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -284,6 +281,19 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "_donationsContract",
+						"type": "address"
+					}
+				],
+				"name": "setDonationsContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "string",
 						"name": "_name",
 						"type": "string"
@@ -333,11 +343,11 @@
 	},
 	"sources": {
 		"Blockchain_project/ProfileManager.sol": {
-			"keccak256": "0xd2716aa2c126d77bbe79b18b24ad6b939ad85e75a016a8f720aaafed9e35d0ab",
+			"keccak256": "0x52f5350c8d43ccd70b1bada0e21d207789ffa635b9f8055ada350c6a4e895ada",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://455f14916d95287956590b15a1cba10fd499b28eb5505ac0db16c6aa28e72ad0",
-				"dweb:/ipfs/QmPGPLvPfWBsRTPXwtL7pQL3hLQoicnFnMtpSL3U424t9c"
+				"bzz-raw://08f11a9eb3bcd6938647082984c2edb1e14ed459a4b95806e63a3ce200a35714",
+				"dweb:/ipfs/QmXvJFvck6Fe3rbQ7nJhgPn1sFN3NM8hQGKR9QPiKAxX9E"
 			]
 		}
 	},

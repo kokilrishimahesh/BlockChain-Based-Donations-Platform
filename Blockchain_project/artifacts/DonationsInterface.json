@@ -64,29 +64,14 @@
 			"name": "getCampaignDetails",
 			"outputs": [
 				{
-					"internalType": "string",
-					"name": "",
-					"type": "string"
-				},
-				{
-					"internalType": "string",
-					"name": "",
-					"type": "string"
-				},
-				{
 					"internalType": "address",
 					"name": "",
 					"type": "address"
 				},
 				{
-					"internalType": "uint256",
+					"internalType": "string",
 					"name": "",
-					"type": "uint256"
-				},
-				{
-					"internalType": "uint256",
-					"name": "",
-					"type": "uint256"
+					"type": "string"
 				},
 				{
 					"internalType": "string",
@@ -94,9 +79,19 @@
 					"type": "string"
 				},
 				{
-					"internalType": "address[]",
+					"internalType": "uint256",
 					"name": "",
-					"type": "address[]"
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
 				}
 			],
 			"stateMutability": "view",

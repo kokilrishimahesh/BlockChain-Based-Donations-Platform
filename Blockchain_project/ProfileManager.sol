@@ -6,13 +6,12 @@ interface DonationsInterface {
         external
         view
         returns (
-            string memory,
-            string memory,
             address,
-            uint256,
-            uint256,
             string memory,
-            address[] memory
+            string memory,
+            uint256,
+            uint256,
+            uint256
         );
 }
 
@@ -31,7 +30,7 @@ contract ProfileManager {
         string name;
         string profileImage;
         string description;
-        uint256[] campaignIds; // Change the type to uint256[] memory
+        uint256[] campaignIds; // Dynamic array of campaign IDs
     }
 
     mapping(address => Owner) public owners; // Mapping of owner addresses to Owner profiles
@@ -48,8 +47,8 @@ contract ProfileManager {
         _;
     }
 
-    // Constructor to set the Donations contract address
-    constructor(address _donationsContract) {
+    // Setter function to set the Donations contract address after deployment
+    function setDonationsContract(address _donationsContract) external {
         donationsContract = _donationsContract;
         donationsInstance = DonationsInterface(_donationsContract);
     }
@@ -90,7 +89,7 @@ contract ProfileManager {
 
         require(owner.ownerAddress != address(0), "Profile does not exist"); // Ensure the profile exists
 
-        return owner.ownerAddress == _user; // if it matches return true or else false
+        return owner.ownerAddress == _user; // If it matches return true or else false
     }
 
     function isProfileActive(address _user)
@@ -105,7 +104,6 @@ contract ProfileManager {
     }
 
     // Function to update owner profile details
-    // address, date, role are immutable
     function updateOwnerProfile(
         string memory _name,
         string memory _profileImage,
@@ -117,8 +115,6 @@ contract ProfileManager {
             "Owner profile does not exist."
         );
 
-        // address(0) is a special address in Ethereum that represents a non-existent or uninitialized address.
-        // It is often used to signify "no address" or "null."
         owner.name = _name;
         owner.profileImage = _profileImage;
         owner.description = _description;
@@ -151,34 +147,39 @@ contract ProfileManager {
         public
         view
         returns (
+            address[] memory ownerAddresses,
             string[] memory titles,
             string[] memory descriptions,
-            address[] memory creators,
             uint256[] memory targets,
-            uint256[] memory deadlines,
-            string[] memory statuses,
-            address[][] memory contributors
+            uint256[] memory amountsCollected,
+            uint256[] memory totalWithdrawn
         )
     {
         uint256[] memory campaignIds = owners[_ownerAddress].campaignIds;
+
+        ownerAddresses = new address[](campaignIds.length);
         titles = new string[](campaignIds.length);
         descriptions = new string[](campaignIds.length);
-        creators = new address[](campaignIds.length);
         targets = new uint256[](campaignIds.length);
-        deadlines = new uint256[](campaignIds.length);
-        statuses = new string[](campaignIds.length);
-        contributors = new address[][](campaignIds.length);
+        amountsCollected = new uint256[](campaignIds.length);
+        totalWithdrawn = new uint256[](campaignIds.length);
 
         for (uint256 i = 0; i < campaignIds.length; i++) {
             (
-                titles[i],
-                descriptions[i],
-                creators[i],
-                targets[i],
-                deadlines[i],
-                statuses[i],
-                contributors[i]
+                address ownerAddress,
+                string memory title,
+                string memory description,
+                uint256 target,
+                uint256 amountCollected,
+                uint256 totalWithdrawnAmount
             ) = donationsInstance.getCampaignDetails(campaignIds[i]);
+
+            ownerAddresses[i] = ownerAddress;
+            titles[i] = title;
+            descriptions[i] = description;
+            targets[i] = target;
+            amountsCollected[i] = amountCollected;
+            totalWithdrawn[i] = totalWithdrawnAmount;
         }
     }
 
@@ -186,4 +187,10 @@ contract ProfileManager {
     function getOwnerRole(address _ownerAddress) public view returns (Role) {
         return owners[_ownerAddress].role;
     }
+
+    function getDonationAddress() public view returns (address) {
+        return donationsContract;
+    }
+
+
 }

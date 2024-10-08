@@ -16,6 +16,11 @@
 						"internalType": "uint256",
 						"name": "_requiredApprovals",
 						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_donationContract",
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -50,6 +55,70 @@
 				"name": "createTransaction",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "donationContract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllTransactions",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "to",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "amounts",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "bool[]",
+						"name": "executed",
+						"type": "bool[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "approvalCounts",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getUnexecutedTransactions",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "to",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "amounts",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "approvalCounts",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -132,6 +201,11 @@
 						"internalType": "uint256",
 						"name": "approvalCount",
 						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "signerIndex",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -169,12 +243,28 @@
 		"remappings": []
 	},
 	"sources": {
+		"Blockchain_project/Donation.sol": {
+			"keccak256": "0x3416d2e80e074b6cce3125084c0ed7e9820170efbdb61cc6fd15c0a94a72234d",
+			"license": "Apache-1.1",
+			"urls": [
+				"bzz-raw://96907a2375e138ec8836d7112b55b0410a66b4e7658a82c7509a05d86fe55356",
+				"dweb:/ipfs/QmRPdTuMZnYGVcgukbJReGNtMXhML4vNfUAg8mBYz2rERQ"
+			]
+		},
 		"Blockchain_project/MultiSigWallet.sol": {
-			"keccak256": "0x036f0afdf7b93d3ca82bce058ba34b8c044068a6c5ca38dd3a8b0c5b144da395",
+			"keccak256": "0x82b7a36f174dd0a7e88de9871f5a928ee1c7a4e50cee0a11f7b1fc590d682b8f",
+			"license": "Apache-1.1",
+			"urls": [
+				"bzz-raw://785cb42626b3aba0f9d957450aae196c092d03700d58463f7b6cbbeda183675d",
+				"dweb:/ipfs/QmehhKh1feVebiAspCDmSiziHmvKr5xTtPtiya9ngcxDHp"
+			]
+		},
+		"Blockchain_project/ProfileManager.sol": {
+			"keccak256": "0x52f5350c8d43ccd70b1bada0e21d207789ffa635b9f8055ada350c6a4e895ada",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://21fec09749aa6b596a2488ca7de4451a698f2f2599eccc46855f8fc5e5307982",
-				"dweb:/ipfs/QmZwfmizXFL68Y8RW9pfoibgxbszoPYD5ZMvtVfTHJCxJz"
+				"bzz-raw://08f11a9eb3bcd6938647082984c2edb1e14ed459a4b95806e63a3ce200a35714",
+				"dweb:/ipfs/QmXvJFvck6Fe3rbQ7nJhgPn1sFN3NM8hQGKR9QPiKAxX9E"
 			]
 		}
 	},
