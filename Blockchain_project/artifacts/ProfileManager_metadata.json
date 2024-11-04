@@ -343,11 +343,11 @@
 	},
 	"sources": {
 		"Blockchain_project/ProfileManager.sol": {
-			"keccak256": "0x52f5350c8d43ccd70b1bada0e21d207789ffa635b9f8055ada350c6a4e895ada",
+			"keccak256": "0x708e1ba8ef7f10f43a5e924ddb4de68246bc47774caf43a609e77b569e68e778",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://08f11a9eb3bcd6938647082984c2edb1e14ed459a4b95806e63a3ce200a35714",
-				"dweb:/ipfs/QmXvJFvck6Fe3rbQ7nJhgPn1sFN3NM8hQGKR9QPiKAxX9E"
+				"bzz-raw://6c8600781e45170a14a4b02a6b52d16b638357fb37deccadf44170df63954da4",
+				"dweb:/ipfs/QmW2dxeq5toeJ1hsaoQpAvGwgmK4epbAAuJZww8syp4bRE"
 			]
 		}
 	},

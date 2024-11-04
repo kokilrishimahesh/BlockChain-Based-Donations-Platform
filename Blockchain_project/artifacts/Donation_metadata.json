@@ -415,19 +415,19 @@
 	},
 	"sources": {
 		"Blockchain_project/Donation.sol": {
-			"keccak256": "0xbffbf6be48a718d0e7b955bbb0915f444bdf58118180ae2b78360bec768a740d",
+			"keccak256": "0x3416d2e80e074b6cce3125084c0ed7e9820170efbdb61cc6fd15c0a94a72234d",
 			"license": "Apache-1.1",
 			"urls": [
-				"bzz-raw://271c155ca7cfa1e1a922cecc228205f0112e4cfcdc14a24c7be3cb4a19420b32",
-				"dweb:/ipfs/QmX5zG4zJsA7AMq1GGjDaYg2eHZ1F7rGTfnBuumhd4oa2c"
+				"bzz-raw://96907a2375e138ec8836d7112b55b0410a66b4e7658a82c7509a05d86fe55356",
+				"dweb:/ipfs/QmRPdTuMZnYGVcgukbJReGNtMXhML4vNfUAg8mBYz2rERQ"
 			]
 		},
 		"Blockchain_project/MultiSigWallet.sol": {
-			"keccak256": "0x1fee5d19be3762ab46f0d75fbe37d5d36e8418b7bb502a1dd38c9e5058413031",
-			"license": "UNLICENSED",
+			"keccak256": "0x82b7a36f174dd0a7e88de9871f5a928ee1c7a4e50cee0a11f7b1fc590d682b8f",
+			"license": "Apache-1.1",
 			"urls": [
-				"bzz-raw://9f77e022c6ae838878602f1a7732b675af5b8ebe92422038be288be10eb982a4",
-				"dweb:/ipfs/QmejB34ZeuRPMCBD2jCc8iNtCCZ7fKNpZNPKsRdjmTYF9w"
+				"bzz-raw://785cb42626b3aba0f9d957450aae196c092d03700d58463f7b6cbbeda183675d",
+				"dweb:/ipfs/QmehhKh1feVebiAspCDmSiziHmvKr5xTtPtiya9ngcxDHp"
 			]
 		},
 		"Blockchain_project/ProfileManager.sol": {

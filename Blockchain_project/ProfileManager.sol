@@ -11,7 +11,7 @@ interface DonationsInterface {
             string memory,
             uint256,
             uint256,
-            uint256
+            uint256 
         );
 }
 
